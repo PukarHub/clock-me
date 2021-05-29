@@ -36,7 +36,7 @@ const Chats = () => {
         // Checks if there is existing user
         axios.get('https://api.chatengine.io/users/me/', {
             headers: {
-                "project-id": "f4060c16-61d5-4ee0-a8e4-784b85b9ae31",
+                "project-id": process.env.REACT_APP_CHAT_ENGINE_ID,
                 "user-name": user.email,
                 "user-secret": user.uid,
             }
@@ -55,10 +55,10 @@ const Chats = () => {
                     formdata.append('avatar', avatar, avatar.name)
 
                     // Creates a new User
-                    axios.post('https://api.chatengine.io/users', (
+                    axios.post('https://api.chatengine.io/users/', (
                         formdata,
                         {  
-                            headers: {'PRIVATE-KEY' : "a1045f3f-323c-48bb-9889-52524f2c4f85"}
+                            headers: {'PRIVATE-KEY' : process.env.REACT_APP_CHAT_ENGINE_KEY}
                         }
                         ))
                         .then(() => setLoading(false))
@@ -82,7 +82,7 @@ const Chats = () => {
            </div>
            <ChatEngine
                 height="calc(100vh-66px)"
-                projectID="f4060c16-61d5-4ee0-a8e4-784b85b9ae31"
+                projectID= {process.env.REACT_APP_CHAT_ENGINE_ID}
                 userName={user.email}
                 userSecret={user.uid}
                 />
