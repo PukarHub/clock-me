@@ -1,4 +1,5 @@
 /* Global */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
   font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -6,7 +7,7 @@
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
-/* Chats Page */
+/* Chats Page */  
 
 .chats-page {
   position: absolute;
@@ -19,8 +20,12 @@
 .nav-bar {
   width: 100%;
   height: 66px;
-  background-color: #002766;
+  /* background: radial-gradient(circle, rgba(219,15,104,1) 0%, rgba(112,149,193,1) 100%); */
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+
 }
+
 
 .logo-tab {
   position: absolute;
@@ -29,6 +34,7 @@
   font-size: 32px;
   font-weight: 700;
   color: white;
+  cursor: pointer;
 }
 
 .logout-tab {
@@ -37,7 +43,9 @@
   right: 22px;
   color: white;
   cursor: pointer;
+  font-weight: bold;
 }
+
 
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */

@@ -8,6 +8,7 @@ import { useAuth } from "../contexts/AuthContext"
 
 import { auth } from "../firebase"
 
+
 export default function Chats() {
   const didMountRef = useRef(false)
   const [ loading, setLoading ] = useState(true)
@@ -79,7 +80,7 @@ export default function Chats() {
     <div className='chats-page'>
       <div className='nav-bar'>
         <div className='logo-tab'>
-          Unichat
+          Clock-Me
         </div>
 
         <div onClick={handleLogout} className='logout-tab'>
