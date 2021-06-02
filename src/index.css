@@ -15,6 +15,7 @@
   left: 0px;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .nav-bar {
@@ -65,4 +66,13 @@
   position: relative;
   left: calc(50vw - 33px);
   top: calc(50vh - 22px);
+}
+
+@media only screen and (max-width: 600px) {
+  .ce-primary-button{
+    position: absolute;
+    left: 16rem;
+    bottom: .5rem;
+    
+}
 }
