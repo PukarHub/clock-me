@@ -1,13 +1,12 @@
 import React from 'react'
 import { GoogleOutlined, FacebookOutlined } from '@ant-design/icons'
-import "firebase/app";
-import Logo from '../logo.png'
-import {auth} from '../firebase';
 import firebase from 'firebase/app';
+import {auth} from '../firebase';
 import { Button } from '@material-ui/core'
 import './Login.css'
+import Logo from '../logo.png'
 
-const Login = () => {
+export default function Login() {
     const google = () => {
         auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())
     }
@@ -29,5 +28,3 @@ const Login = () => {
         </div>
     )
 }
-
-export default Login
